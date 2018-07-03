@@ -15,19 +15,19 @@ class bcolors:
         self.ENDC = ''
 
 
-import dns.resolver #import the module
-import argparse
-parser = argparse.ArgumentParser()
+import dns.resolver 
+import argparse    #import module argparse
+parser = argparse.ArgumentParser() #create a new instance named 'parser'
 parser.add_argument("-i", "--input", help="Input a: URL, file or folder. For folders a wildcard can be used (e.g. '/*.js').",required="True", action="store")
 args = parser.parse_args()
 host=args.input
-record_type=['A','AAAA','MX','TXT']
+record_type=['A','AAAA','MX','TXT']  # create a list of accepted dns records type
 myResolver = dns.resolver.Resolver() #create a new instance named 'myResolver'
 for record in record_type:
 	
     try:
         print '{.OKBLUE}==================================={.ENDC}'.format(bcolors, bcolors); print record
-        myAnswers = myResolver.query(host, record) #Lookup the 'A' record(s) for google.com
+        myAnswers = myResolver.query(host, record) #Lookup the 'A','AAAA','MX','TXT' record(s) for provided domain
         for rdata in myAnswers: #for each response
             print rdata #print the data
     except:
