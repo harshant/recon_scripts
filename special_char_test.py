@@ -1,3 +1,4 @@
+//this is useful for SSRF 
 #!/usr/bin/env python2
 
 import requests
