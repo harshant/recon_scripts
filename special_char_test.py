@@ -1,4 +1,3 @@
-//this is useful for SSRF 
 #!/usr/bin/env python2
 
 import requests
@@ -24,3 +23,6 @@ for i in xrange(0x7f):
 
     # Check the response
     print repr(domain), response.text
+
+
+# This script is useful for testing ssrf vulnerabilities
