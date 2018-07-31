@@ -42,6 +42,7 @@ Input is in either standard or url-safe JWT format, and the resulting tokens are
 
 
 ## Further Reading
+* Timing attack is also a thing ,check is out to for further exploitation.
 * [A great intro to JWTs - https://jwt.io/introduction/](https://jwt.io/introduction/)
 
 * A lot of the inspiration for this tool comes from the vulnerabilities discovered by Tim McLean.  
