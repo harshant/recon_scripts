@@ -21,8 +21,8 @@ parser.add_argument("-a","--header",help="Add authorization header",action="stor
 args = parser.parse_args()
 
 he=args.header.split(":")
-with open('links.txt',"r") as f:
-    lines = f.read().splitlines()
+#with open('links.txt',"r") as f:
+ # //  lines = f.read().splitlines()
 
 for dir in files:
     if args.header:
